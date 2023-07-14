@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@200&display=swap');
 .App {
   text-align: center;
 }
@@ -35,4 +36,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo{
+  height: 25px;
+  margin-right: 10px;
+}
+.logo-heading{
+  font-size: "1.5em";
+  cursor: "pointer";
+  font-weight: 'bolder';
+  font-family: 'Ysabeau Infant, sans-serif';
 }
