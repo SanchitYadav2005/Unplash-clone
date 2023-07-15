@@ -2,10 +2,17 @@ import React from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
+import { useEffect } from "react";
+import axios from "axios";
 
 
 
 export default function MainSection() {
+    useEffect(()=>{
+        const getImgaes = async () =>{
+            const res = await axios.get("")
+        }
+    })
    return (
         <Box
             sx={{
@@ -15,7 +22,7 @@ export default function MainSection() {
             }}
         >
 
-            <TextField fullWidth label={<SearchIcon/>} id="fullWidth" autoFocus />
+            <TextField fullWidth label={<SearchIcon/>} placeholder="Search high-resolution images" id="fullWidth" autoFocus />
         </Box>
     );
 }
