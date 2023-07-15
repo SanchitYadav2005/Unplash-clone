@@ -13,12 +13,13 @@ export default function MainSection() {
         const getImgaes = async () => {
             const config = {
                 parmas: {
-                    page: 1
+                    page: 1,
                 }
             }
             const res = await axios.get("https://api.unsplash.com/photos/?client_id=pU8yYlV2cvqWFW2nTOlfEWkgeludhX_dL5WPIhT8gdU", config)
-            console.log(res.data[0].urls.raw)
-            changeImg(res.data[0].urls.raw)
+            const urls = res.data.map(arr => arr.urls.thumb)
+            console.log(res.data.map(i => i.urls.thumb))
+            changeImg(urls)
         }
         getImgaes()
     })
@@ -34,7 +35,7 @@ export default function MainSection() {
 
                 <TextField fullWidth label={<SearchIcon />} placeholder="Search high-resolution images" id="fullWidth" autoFocus />
             </Box>
-            <img src={img} style={{width:"100px", height:"100px"}}/>
+            <img src={img} />
         </div>
 
     );
