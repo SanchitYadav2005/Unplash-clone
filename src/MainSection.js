@@ -8,17 +8,19 @@ import axios from "axios";
 
 
 export default function MainSection() {
-    const [img, changeImg] = useState("")
+    const [img, changeImg] = useState([""])
     useEffect(() => {
         const getImgaes = async () => {
             const config = {
                 parmas: {
-                    page: 1,
+                    page: 364,
+                },
+                attributes:{
+                    rel:"first"
                 }
             }
             const res = await axios.get("https://api.unsplash.com/photos/?client_id=pU8yYlV2cvqWFW2nTOlfEWkgeludhX_dL5WPIhT8gdU", config)
-            const urls = res.data.map(arr => arr.urls.thumb)
-            console.log(res.data.map(i => i.urls.thumb))
+            const urls = res.data.map(arr => arr.urls)
             changeImg(urls)
         }
         getImgaes()
@@ -35,7 +37,9 @@ export default function MainSection() {
 
                 <TextField fullWidth label={<SearchIcon />} placeholder="Search high-resolution images" id="fullWidth" autoFocus />
             </Box>
-            <img src={img} />
+            {img.map(src=>
+                <img src={src.thumb}/>
+            )}
         </div>
 
     );
