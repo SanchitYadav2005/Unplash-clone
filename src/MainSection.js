@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 
-export default function SearchBar() {
+export default function MainSection() {
    return (
         <Box
             sx={{

@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
+import MainSection from "./MainSection";
 
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <SearchBar/>
+      <MainSection/>
     </div>
   );
 }
