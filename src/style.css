@@ -1,4 +1,11 @@
 .img-container{
     margin: 3em 1em 3em 1em;
     width: 30%;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.img-container:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
 }
