@@ -14,7 +14,8 @@ export default function MainSection() {
         const getImgaes = async () => {
             const config = {
                 parmas: {
-                    page: 364,
+                    per_page: 20
+
                 },
                 attributes:{
                     rel:"first"
@@ -28,18 +29,18 @@ export default function MainSection() {
     })
     return (
         <div>
-            <Box
+            <Box 
                 sx={{
                     width: 500,
                     maxWidth: '100%',
-                    margin: "8em 10em 0em 25em"
+                    margin: "8em 10em 0em 25em",
                 }}
             >
 
                 <TextField fullWidth label={<SearchIcon />} placeholder="Search high-resolution images" id="fullWidth" autoFocus />
             </Box>
             {img.map(src=>
-                <img className="img-container" src={src.thumb}/>
+                <img className="img-container" src={src.regular}/>
             )}
         </div>
 
