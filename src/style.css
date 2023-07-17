@@ -9,3 +9,27 @@
 .img-container:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
 }
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    background-color: #1769aa;
+    padding: 3em 3em 3em 3em;
+}
+
+.footer-heading{
+    margin-right: 15em;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.list-item{
+    color: #001219;
+}
+.item-links{
+    text-decoration: none;
+    font-weight: bolder;
+}

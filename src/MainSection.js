@@ -12,7 +12,7 @@ export default function MainSection() {
     const [img, changeImg] = useState([""])
     useEffect(() => {
         const getImgaes = async () => {
-            const res = await axios.get("https://api.unsplash.com/photos/?client_id=pU8yYlV2cvqWFW2nTOlfEWkgeludhX_dL5WPIhT8gdU&per_page=50")
+            const res = await axios.get("https://api.unsplash.com/photos/?client_id=pU8yYlV2cvqWFW2nTOlfEWkgeludhX_dL5WPIhT8gdU&per_page=25")
             const urls = res.data.map(arr => arr.urls)
             changeImg(urls)
         }
