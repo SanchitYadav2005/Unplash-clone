@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import './style.css';
 
 
 
@@ -38,7 +39,7 @@ export default function MainSection() {
                 <TextField fullWidth label={<SearchIcon />} placeholder="Search high-resolution images" id="fullWidth" autoFocus />
             </Box>
             {img.map(src=>
-                <img src={src.thumb}/>
+                <img className="img-container" src={src.thumb}/>
             )}
         </div>
 
